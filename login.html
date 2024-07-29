@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style type="text/css">
+        body{
+            background-color: skyblue;
+        }
+        .container {
+    width: 300px;
+    margin: 100px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    background-color: aqua;
+}
+
+input[type="email"],
+input[type="text"],
+input[type="password"] {
+    display: block;
+    width: 80%;
+    padding: 10px;
+}
+
+input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2><center><u>Login</u></center></h2>
+        <form action="login.php" method="POST">
+            <input type="email" name="email" placeholder="Email" required><br><br>
+            <input type="password"id="password" name="password" placeholder="Password" required><br>
+             <input type="checkbox" onclick="togglePassword()">Show password<br><br>
+            <input type="submit" value="Login">
+        </form>
+        <p>Don't have an account? <a href="registration.html">Register here</a></p>
+    </div>
+    <script type="text/javascript">
+  function togglePassword() {
+    var x = document.getElementById("password");
+    if (x.type === "password"){
+      x.type = "text";
+    }
+    else{
+      x.type = "password";
+    }
+  }
+</script>
+</body>
+</html>
